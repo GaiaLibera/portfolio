@@ -1,0 +1,56 @@
+* {
+  font-family: Helvetica;
+}
+
+div.header {
+  background-color: white;
+  width: 98vw;
+  height: 130px;
+  text-align: right;
+  position: fixed;
+  top: 0px;
+  border: 10px;
+}
+div.header h1 {
+  color: black;
+  font-style: inherit;
+  font-size: 30px;
+}
+div.header h2 {
+  font-weight: lighter;
+  display: inline-block;
+  margin-left: 30px;
+  margin-block: 5px;
+}
+div.header img {
+  height: 25px;
+  margin-left: 20px;
+  margin-bottom: -3px;
+}
+
+text {
+  color: rgb(150, 150, 150);
+  font-size: 15px;
+  position: relative;
+  top: 10px;
+  left: 90px;
+}
+text p {
+  white-space: pre-line;
+}
+
+div.porfolio {
+  background-color: white;
+  margin-top: 130px;
+}
+div.porfolio img {
+  height: 480px;
+}
+
+@media screen and (min-width: 720px) {
+  img {
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
