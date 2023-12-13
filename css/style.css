@@ -6,30 +6,43 @@ a {
   text-decoration: none;
 }
 
-div.header {
-  background-color: white;
-  width: 10vh;
-  height: 100vw;
-  text-align: left;
-  position: fixed;
-  top: 0px;
-  border: 10px;
-}
-div.header h1 {
+h1 {
   color: black;
   font-style: inherit;
   font-size: 30px;
+  margin-left: 250px;
+  position: fixed;
+  top: 0px;
 }
-div.header h2 {
-  font-weight: lighter;
-  line-height: 70px;
-  margin-block: 5px;
+
+div.nav {
+  background-color: black;
+  color: white;
+  width: 27vh;
+  height: 100vh;
+  text-align: left;
+  position: fixed;
+  left: 0px;
+  top: 0px;
 }
-div.header img {
-  width: 30px;
-  height: 30px;
+div.nav h2, div.nav h3 {
   position: relative;
-  top: 400px;
+  left: 16px;
+  right: 8px;
+}
+div.nav h2 {
+  margin-top: 40px;
+  line-height: 5px;
+  font-weight: lighter;
+}
+div.nav h3 {
+  font-weight: lighter;
+  font-size: 9pt;
+  position: absolute;
+  bottom: 20px;
+}
+div.nav h3 a {
+  color: white;
 }
 
 text {
@@ -45,7 +58,7 @@ text p {
 
 div.porfolio {
   background-color: white;
-  margin-top: 130px;
+  margin-top: 100px;
 }
 div.porfolio img {
   height: 480px;
