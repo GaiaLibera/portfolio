@@ -6,16 +6,7 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    color: black;
-    font-style:inherit;
-    font-size: 30px;
-    margin-left: 250px;
-    position: fixed; 
-    top: 0px;
-}
-
-div.nav {
+#menu-of-canvas {
     background-color: black;
     color:white;
     width: 27vh;
@@ -23,25 +14,45 @@ div.nav {
     text-align:left;
     position: fixed;
     left:0px;
-    top:0px;
-    h2, h3 {
-        position:relative;
-        left:16px;
-        right:8px;
+    top:0px; 
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        margin:20px;
+        font-weight:lighter;
     }
-    h2 {
-        margin-top: 40px;
-        line-height: 5px;
+    li {
+        list-style-type: none;
+    }
+    ul a {
+        text-decoration: none;
+        font-size: 20pt;
+        color: white;
+        margin-left:-20px;
         font-weight:lighter;
     }
     h3{
         font-weight:lighter;
         font-size: 9pt;
         position: absolute;
-        bottom: 20px;
-    }
-    h3 a {
+        bottom: 0px;
+        margin: 20px;
+        color: rgb(212, 212, 212);
+        p1 {
+            line-height: 18px;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(212, 212, 212);
+        }
+        p1 categories {
+        font-weight: bold;
         color: white;
+        }
+        p2 credits {
+            font-size: 10px;
+            line-height: 10px;
+        }
     }
 }
 
