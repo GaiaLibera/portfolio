@@ -6,6 +6,21 @@ a {
     text-decoration: none;
 }
 
+.hamburger-menu {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 2;
+    .icon-bar { 
+        display: block;
+        width: 22px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 4px;
+    }
+}
+
 #menu-of-canvas {
     background-color: black;
     color:white;
@@ -15,6 +30,11 @@ a {
     position: fixed;
     left:0px;
     top:0px; 
+    transition:.3s; 
+    transform: translateX(-27vh);
+    .wide {
+        transform: translateX(0);
+    }
     h1 {
         color: rgb(255, 255, 255);
         font-size: 25px;
@@ -68,8 +88,6 @@ text {
 }
 
  div.porfolio {
-    background-color:white;
-    margin-top: 100px;
     img {
         height: 480px;
     }
