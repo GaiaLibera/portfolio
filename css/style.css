@@ -17,27 +17,22 @@ a {
   display: block;
   width: 22px;
   height: 3px;
-  background-color: black;
+  background-color: white;
   margin-bottom: 4px;
 }
 
 #menu-of-canvas {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   width: 27vh;
   height: 100vh;
   text-align: left;
   position: fixed;
   left: 0px;
   top: 0px;
-  transition: 0.3s;
-  transform: translateX(-27vh);
-}
-#menu-of-canvas .wide {
-  transform: translateX(0);
+  /* transform: translateX(-27vh); */
 }
 #menu-of-canvas h1 {
-  color: rgb(255, 255, 255);
   font-size: 25px;
   margin: 20px;
   font-weight: lighter;
@@ -48,9 +43,9 @@ a {
 #menu-of-canvas ul a {
   text-decoration: none;
   font-size: 20pt;
-  color: white;
   margin-left: -20px;
   font-weight: lighter;
+  color: black;
 }
 #menu-of-canvas h3 {
   font-weight: lighter;
@@ -58,22 +53,16 @@ a {
   position: absolute;
   bottom: 0px;
   margin: 20px;
-  color: rgb(212, 212, 212);
 }
 #menu-of-canvas h3 p1 {
   line-height: 18px;
 }
-#menu-of-canvas h3 a {
-  text-decoration: none;
-  color: rgb(212, 212, 212);
-}
 #menu-of-canvas h3 p1 categories {
   font-weight: bold;
-  color: white;
 }
-#menu-of-canvas h3 p2 credits {
-  font-size: 10px;
-  line-height: 10px;
+#menu-of-canvas h3 a {
+  text-decoration: none;
+  color: black;
 }
 
 text {
@@ -87,8 +76,11 @@ text p {
   white-space: pre-line;
 }
 
-div.porfolio img {
-  height: 480px;
+div.porfolio {
+  height: 100vw;
+  width: 100vw;
+  background-color: black;
+  color: black;
 }
 
 @media screen and (min-width: 720px) {

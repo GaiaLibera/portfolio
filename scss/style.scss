@@ -16,27 +16,22 @@ a {
         display: block;
         width: 22px;
         height: 3px;
-        background-color: black;
+        background-color: white;
         margin-bottom: 4px;
     }
 }
 
 #menu-of-canvas {
-    background-color: black;
-    color:white;
+    background-color: white;
+    color: black;
     width: 27vh;
     height: 100vh;
     text-align:left;
     position: fixed;
     left:0px;
     top:0px; 
-    transition:.3s; 
-    transform: translateX(-27vh);
-    .wide {
-        transform: translateX(0);
-    }
+    /* transform: translateX(-27vh); */
     h1 {
-        color: rgb(255, 255, 255);
         font-size: 25px;
         margin:20px;
         font-weight:lighter;
@@ -47,9 +42,9 @@ a {
     ul a {
         text-decoration: none;
         font-size: 20pt;
-        color: white;
         margin-left:-20px;
         font-weight:lighter;
+        color: black;
     }
     h3{
         font-weight:lighter;
@@ -57,21 +52,15 @@ a {
         position: absolute;
         bottom: 0px;
         margin: 20px;
-        color: rgb(212, 212, 212);
         p1 {
             line-height: 18px;
+            categories {
+                 font-weight: bold;
+            }
         }
         a {
             text-decoration: none;
-            color: rgb(212, 212, 212);
-        }
-        p1 categories {
-        font-weight: bold;
-        color: white;
-        }
-        p2 credits {
-            font-size: 10px;
-            line-height: 10px;
+            color: black;
         }
     }
 }
@@ -88,9 +77,10 @@ text {
 }
 
  div.porfolio {
-    img {
-        height: 480px;
-    }
+    height: 100vw;
+    width: 100vw;
+    background-color: black;
+    color: black;
  }
 
 
