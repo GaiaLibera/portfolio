@@ -1,19 +1,31 @@
 * {
   font-family: Helvetica;
+  margin: 0px;
 }
 
 a {
   text-decoration: none;
 }
 
-.hamburger-menu {
+h1 {
+  font-size: 25px;
+  margin: 20px;
+  font-weight: lighter;
+  color: rgb(0, 0, 0);
   position: fixed;
-  left: 30px;
-  top: 30px;
-  cursor: pointer;
-  z-index: 2;
+  z-index: 101;
 }
-.hamburger-menu .icon-bar {
+
+.hamburger {
+  position: fixed;
+  left: 250px;
+  top: 33px;
+  cursor: pointer;
+  z-index: 100;
+  background-color: black;
+  border: none;
+}
+.hamburger .open {
   display: block;
   width: 22px;
   height: 3px;
@@ -21,7 +33,7 @@ a {
   margin-bottom: 4px;
 }
 
-#menu-of-canvas {
+.menu {
   background-color: white;
   color: black;
   width: 27vh;
@@ -29,42 +41,44 @@ a {
   text-align: left;
   position: fixed;
   left: 0px;
-  top: 0px;
-  /* transform: translateX(-27vh); */
+  padding-top: 75px;
+  z-index: 99;
+  /* transform: translateX(-27vh);
+   transition: transform 0.2; */
 }
-#menu-of-canvas h1 {
-  font-size: 25px;
-  margin: 20px;
-  font-weight: lighter;
-}
-#menu-of-canvas li {
+.menu li {
   list-style-type: none;
 }
-#menu-of-canvas ul a {
+.menu ul a {
   text-decoration: none;
   font-size: 20pt;
   margin-left: -20px;
   font-weight: lighter;
   color: black;
 }
-#menu-of-canvas h3 {
+.menu h3 {
   font-weight: lighter;
   font-size: 9pt;
   position: absolute;
-  bottom: 0px;
+  bottom: 70px;
   margin: 20px;
 }
-#menu-of-canvas h3 p1 {
+.menu h3 p1 {
   line-height: 18px;
 }
-#menu-of-canvas h3 p1 categories {
+.menu h3 p1 categories {
   font-weight: bold;
 }
-#menu-of-canvas h3 a {
+.menu h3 a {
   text-decoration: none;
   color: black;
 }
 
+/*
+.showmenu{
+    transform: translateX(0);
+}
+*/
 text {
   color: rgb(150, 150, 150);
   font-size: 15px;
@@ -77,10 +91,26 @@ text p {
 }
 
 div.porfolio {
-  height: 100vw;
+  height: 100vh;
   width: 100vw;
   background-color: black;
-  color: black;
+  z-index: 0;
+}
+div.porfolio img {
+  height: 300px;
+  position: absolute;
+  top: 500px;
+}
+div.porfolio #bosch-fragola {
+  left: 560px;
+}
+div.porfolio #bosch-verticale {
+  left: 1140px;
+}
+div.porfolio #bosch-gufo {
+  height: 350px;
+  top: 480px;
+  left: 30px;
 }
 
 @media screen and (min-width: 720px) {
