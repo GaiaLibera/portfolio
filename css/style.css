@@ -22,7 +22,7 @@ h1 {
   top: 33px;
   cursor: pointer;
   z-index: 100;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border: none;
 }
 .hamburger .open {
@@ -90,32 +90,33 @@ text p {
   white-space: pre-line;
 }
 
-div.porfolio {
-  height: 100vh;
+div.sfondo {
+  height: 100vw;
   width: 100vw;
   background-color: black;
   z-index: 0;
 }
-div.porfolio img {
+div.sfondo img {
   height: 300px;
   position: absolute;
   top: 500px;
 }
-div.porfolio #bosch-fragola {
+div.sfondo #bosch-fragola {
   left: 560px;
 }
-div.porfolio #bosch-verticale {
+div.sfondo #bosch-verticale {
   left: 1140px;
 }
-div.porfolio #bosch-gufo {
+div.sfondo #bosch-gufo {
   height: 350px;
   top: 480px;
   left: 30px;
 }
 
-@media screen and (min-width: 720px) {
-  img {
-    height: 200px;
+@media screen and (max-width: 767px) {
+  div.portfolio {
+    height: 1920px;
+    width: 767px;
   }
 }
 
