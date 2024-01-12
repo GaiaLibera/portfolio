@@ -1,13 +1,11 @@
-const sidebar = document.querySelector('.menu');
-const sidebarToggler = document.querySelector('.hamburger');
+const menu = document.querySelector('#menu')
+const toggle = document.querySelector('#toggle')
 
-sidebarToggler.addEventListener('click', () => {
-    sidebar.classList.toggle('showmenu');
-});
+const toggleMenu = () => {
+  toggle.classList.toggle('is-active')
+  menu.classList.toggle('active')
+}
 
-
-window.addEventListener('click', (e) => {
-    if (e.target.id !== 'menu' && e.target.className !== 'hamburger') {
-        sidebar.classList.remove('showmenu');
-    }
-});
+document.addEventListener('DOMContentLoaded', () =>{
+  toggle.addEventListener('click', toggleMenu)
+})
