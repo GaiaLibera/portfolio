@@ -111,26 +111,23 @@ text {
  }
 }
 
- @media screen and (min-width: 720px) {
-    menu {
-        width: 100vh;
+ @media screen and (max-width: 600px) {
+    #menu.active {
+        width: 100vw;
         ul a {
             font-size: 16px;
         }
         h3 {
             font-size: 12px;
         }
+    }
+    div.sfondo {
+        height: 100vh;
+    #bosch-verticale{
+        display: none;
+    }
+    #bosch-fragola{
+        display: none;
+    }
     }
  }
-
- @media screen and (min-width: 1024px) {
-    menu {
-        width: 100vh;
-        ul a {
-            font-size: 16px;
-        }
-        h3 {
-            font-size: 12px;
-        }
-    }
-  }

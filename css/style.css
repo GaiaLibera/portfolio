@@ -111,26 +111,24 @@ div.sfondo #bosch-gufo {
   margin-right: 20px;
 }
 
-@media screen and (min-width: 720px) {
-  menu {
-    width: 100vh;
+@media screen and (max-width: 600px) {
+  #menu.active {
+    width: 100vw;
   }
-  menu ul a {
+  #menu.active ul a {
     font-size: 16px;
   }
-  menu h3 {
+  #menu.active h3 {
     font-size: 12px;
   }
-}
-@media screen and (min-width: 1024px) {
-  menu {
-    width: 100vh;
+  div.sfondo {
+    height: 100vh;
   }
-  menu ul a {
-    font-size: 16px;
+  div.sfondo #bosch-verticale {
+    display: none;
   }
-  menu h3 {
-    font-size: 12px;
+  div.sfondo #bosch-fragola {
+    display: none;
   }
 }
 
