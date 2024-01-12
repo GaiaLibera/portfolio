@@ -111,7 +111,7 @@ text {
  }
 }
 
- @media screen and (max-width: 767px) {
+ @media screen and (min-width: 720px) {
     menu {
         width: 100vh;
         ul a {
