@@ -112,8 +112,13 @@ text {
 }
 
  @media screen and (max-width: 767px) {
-    div.portfolio{
-        height: 1920px;
-        width: 767px;
+    menu {
+        width: 100vh;
+        ul a {
+            font-size: 16px;
+        }
+        h3 {
+            font-size: 12px;
+        }
     }
  }

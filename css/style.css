@@ -112,9 +112,14 @@ div.sfondo #bosch-gufo {
 }
 
 @media screen and (max-width: 767px) {
-  div.portfolio {
-    height: 1920px;
-    width: 767px;
+  menu {
+    width: 100vh;
+  }
+  menu ul a {
+    font-size: 16px;
+  }
+  menu h3 {
+    font-size: 12px;
   }
 }
 
