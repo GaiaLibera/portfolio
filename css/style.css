@@ -117,6 +117,9 @@ text p {
   #menu.active h3 {
     font-size: 12px;
   }
+  .slider {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
