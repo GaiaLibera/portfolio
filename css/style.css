@@ -107,7 +107,7 @@ text p {
   height: 450px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   #menu.active {
     width: 100vw;
   }
