@@ -12,19 +12,18 @@ a {
   width: 100px;
   height: 100px;
   position: fixed;
-  top: 30px;
-  right: 30px;
+  right: 20px;
   z-index: 100;
 }
 
 #menu {
   background-color: white;
   color: black;
-  width: 27vh;
+  width: 40vh;
   height: 100vh;
   text-align: left;
   position: fixed;
-  right: -27vh;
+  right: -40vh;
   transition: all 0.3s;
   padding-top: 75px;
   z-index: 99;
@@ -40,6 +39,9 @@ a {
   color: black;
   position: relative;
   top: 100px;
+}
+#menu li :hover {
+  color: rgb(208, 208, 208);
 }
 #menu h3 {
   font-weight: lighter;
@@ -74,41 +76,35 @@ text p {
   white-space: pre-line;
 }
 
-div.sfondo {
-  height: 100vh;
+.slider {
+  position: relative;
   width: 100vw;
-  background-color: black;
-  z-index: 0;
+  height: 100vh;
+  overflow: hidden;
 }
-div.sfondo img {
-  height: 300px;
+.slider .slide {
+  display: none;
   position: absolute;
-  top: 500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
 }
-div.sfondo #bosch-fragola {
-  left: 560px;
-}
-div.sfondo #bosch-verticale {
-  left: 1140px;
-}
-div.sfondo #bosch-gufo {
-  height: 350px;
-  top: 480px;
-  left: 30px;
+.slider .active {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .Photographies {
-  height: 2000px;
+  height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   z-index: 0;
-  padding: 40px;
+  padding: 20px;
 }
 .Photographies img {
   height: 450px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -116,19 +112,13 @@ div.sfondo #bosch-gufo {
     width: 100vw;
   }
   #menu.active ul a {
-    font-size: 16px;
+    font-size: 24px;
   }
   #menu.active h3 {
     font-size: 12px;
   }
   div.sfondo {
     height: 100vh;
-  }
-  div.sfondo #bosch-verticale {
-    display: none;
-  }
-  div.sfondo #bosch-fragola {
-    display: none;
   }
 }
 

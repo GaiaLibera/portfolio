@@ -12,19 +12,18 @@ a {
     width: 100px;
     height: 100px;
     position: fixed;
-    top: 30px;
-    right: 30px;
+    right: 20px;
     z-index: 100;
   }
 
 #menu {
     background-color: white;
     color: black;
-    width: 27vh;
+    width: 40vh;
     height: 100vh;
     text-align:left;
     position: fixed;
-    right: -27vh;
+    right: -40vh;
     transition: all .3s;
     padding-top:75px; 
     z-index: 99;
@@ -39,6 +38,9 @@ a {
         color: black;
         position: relative;
         top:100px;
+    }
+    li :hover{
+        color: rgb(208, 208, 208)
     }
     h3{
         font-weight:lighter;
@@ -74,40 +76,40 @@ text {
      }
 }
 
- div.sfondo {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    z-index: 0;
-    img { 
-        height: 300px;
-        position:absolute;
-        top:500px;
-    }
-    #bosch-fragola{
-        left: 560px;
-    }
-    #bosch-verticale{
-        left:1140px;
-    }
-    #bosch-gufo{
-        height: 350px;
-        top:480px;
-        left:30px;
-    }
- }
+
+.slider {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }   
+       & .active {
+            display:block;
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }  
+    
+    //&.active sfa riferimento al selettore .slide. 
+    //Quindi, il selettore risultante sarà .slider .slide.active. 
+    //Questo significa che la regola si applica solo alle slide che hanno anche la classe .active 
+    //e che sono figlie dirette dell'elemento con la classe .slider.
 
  .Photographies{
-    height: 2000px;
+    height: 100vh;
     width: 100vw;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     z-index: 0;
-    padding: 40px;
+    padding: 20px;
     img {
      height: 450px;
-     margin-top:20px;
-     margin-left:20px;
-     margin-right: 20px;
  }
 }
 
@@ -115,7 +117,7 @@ text {
     #menu.active {
         width: 100vw;
         ul a {
-            font-size: 16px;
+            font-size: 24px;
         }
         h3 {
             font-size: 12px;
@@ -123,11 +125,5 @@ text {
     }
     div.sfondo {
         height: 100vh;
-    #bosch-verticale{
-        display: none;
-    }
-    #bosch-fragola{
-        display: none;
-    }
     }
  }

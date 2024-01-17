@@ -37,7 +37,7 @@
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -60,3 +60,4 @@
 .hamburger--arrow.is-active .hamburger-inner::after {
   transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
 
+  
