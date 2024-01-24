@@ -89,7 +89,6 @@ text p {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 .slider .active {
   display: block;
