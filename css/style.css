@@ -38,7 +38,7 @@ a {
   font-weight: lighter;
   color: black;
   position: relative;
-  top: 100px;
+  top: 30px;
 }
 #menu li :hover {
   color: rgb(208, 208, 208);
@@ -89,21 +89,24 @@ text p {
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .slider .active {
   display: block;
   opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
-.Photographies {
+.container {
   height: 100vh;
-  width: 100vw;
+  width: 95vw;
+  position: absolute;
+  left: 0;
   background-color: rgb(255, 255, 255);
   z-index: 0;
-  padding: 20px;
+  padding-top: 20px;
 }
-.Photographies img {
+.container img {
   height: 450px;
 }
 
