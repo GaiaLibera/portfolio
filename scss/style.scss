@@ -1,3 +1,6 @@
+$color1: red;
+$solor2: blue;
+
 *{
     font-family: Helvetica;
     margin:0px;
@@ -65,13 +68,10 @@ body{
     .menu-item {
         width: 50vw;
         height: 50vh;
+        position: fixed;
         text-decoration: none;
         color: rgb(0, 0, 0);
         font-size: 70px;
-        display: flex;
-        flex-direction: column;
-        justify-content:end;
-        position: fixed;
     }
     .carousel-item{
         object-fit: cover; //responsive img
@@ -79,18 +79,18 @@ body{
     #about{
         top:0;
         right: 0;
-        background-color: rgb(148, 0, 0);
+        background-color: $color1;
         flex-direction: row;
         justify-content:right;
     }
     #work{
         right: 0;
         top:50vh;
-        background-color: rgb(148, 0, 0);
+        background-color: $color1;
     }
     #graphic{
         top: 50vh;
-        background-color: blue;
+        background-color: $solor2;
     }
 }
 
@@ -129,7 +129,7 @@ body{
 }
 
 
- @media screen and (max-width: 720px) {
+ @media screen and (max-width: 768px) {
     #menu.active {
         width: 100vw;
         ul a {
@@ -139,13 +139,25 @@ body{
             font-size: 12px;
         }
     }
-    .slider{
+    body{
+        height: 100vh;
+        width: 100vw;
         display: block;
-    }
-    .section{
+    .menu-item{
             width: 100vw;
             height: 25vh;
-            position: fixed;
+            font-size: 50px;
         }
+    .slider{
+        width: 100vw;
+        height: 25vh;
     }
+    #ph{
+        top:25vh;
+    }
+    #work{
+        top:75vh;
+    }
+    }
+}
  

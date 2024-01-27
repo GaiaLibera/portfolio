@@ -66,13 +66,10 @@ body {
 body .menu-item {
   width: 50vw;
   height: 50vh;
+  position: fixed;
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  position: fixed;
 }
 body .carousel-item {
   object-fit: cover;
@@ -80,14 +77,14 @@ body .carousel-item {
 body #about {
   top: 0;
   right: 0;
-  background-color: rgb(148, 0, 0);
+  background-color: red;
   flex-direction: row;
   justify-content: right;
 }
 body #work {
   right: 0;
   top: 50vh;
-  background-color: rgb(148, 0, 0);
+  background-color: red;
 }
 body #graphic {
   top: 50vh;
@@ -127,7 +124,7 @@ body #graphic {
   height: 450px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   #menu.active {
     width: 100vw;
   }
@@ -137,13 +134,25 @@ body #graphic {
   #menu.active h3 {
     font-size: 12px;
   }
-  .slider {
+  body {
+    height: 100vh;
+    width: 100vw;
     display: block;
   }
-  .section {
+  body .menu-item {
     width: 100vw;
     height: 25vh;
-    position: fixed;
+    font-size: 50px;
+  }
+  body .slider {
+    width: 100vw;
+    height: 25vh;
+  }
+  body #ph {
+    top: 25vh;
+  }
+  body #work {
+    top: 75vh;
   }
 }
 
