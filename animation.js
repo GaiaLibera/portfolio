@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () =>{
   toggle.addEventListener('click', toggleMenu)
 })
 
-//SLIDESHOW
+
+// SLIDESHOW in JS
 document.addEventListener("DOMContentLoaded", function() {
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');

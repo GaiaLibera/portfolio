@@ -3,10 +3,6 @@
   margin: 0px;
 }
 
-a {
-  text-decoration: none;
-}
-
 #toggle {
   transform: scale(1.5);
   width: 100px;
@@ -14,6 +10,7 @@ a {
   position: fixed;
   right: 20px;
   z-index: 100;
+  top: 12px;
 }
 
 #menu {
@@ -28,26 +25,11 @@ a {
   padding-top: 75px;
   z-index: 99;
 }
-#menu li {
-  list-style-type: none;
-}
-#menu ul a {
-  text-decoration: none;
-  font-size: 20pt;
-  margin-left: -20px;
-  font-weight: lighter;
-  color: black;
-  position: relative;
-  top: 30px;
-}
-#menu li :hover {
-  color: rgb(208, 208, 208);
-}
 #menu h3 {
   font-weight: lighter;
   font-size: 9pt;
   position: absolute;
-  bottom: 70px;
+  bottom: 0px;
   margin: 20px;
 }
 #menu h3 p1 {
@@ -76,10 +58,46 @@ text p {
   white-space: pre-line;
 }
 
+body {
+  width: 100;
+  height: 100;
+  z-index: 0;
+}
+body .menu-item {
+  width: 50vw;
+  height: 50vh;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: fixed;
+}
+body .carousel-item {
+  object-fit: cover;
+}
+body #about {
+  top: 0;
+  right: 0;
+  background-color: rgb(148, 0, 0);
+  flex-direction: row;
+  justify-content: right;
+}
+body #work {
+  right: 0;
+  top: 50vh;
+  background-color: rgb(148, 0, 0);
+}
+body #graphic {
+  top: 50vh;
+  background-color: blue;
+}
+
 .slider {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 50vh;
   overflow: hidden;
 }
 .slider .slide {
@@ -89,16 +107,16 @@ text p {
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .slider .active {
   display: block;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 
 .container {
   height: 100vh;
-  width: 95vw;
+  width: 100vw;
   position: absolute;
   left: 0;
   background-color: rgb(255, 255, 255);
@@ -121,6 +139,11 @@ text p {
   }
   .slider {
     display: block;
+  }
+  .section {
+    width: 100vw;
+    height: 25vh;
+    position: fixed;
   }
 }
 
