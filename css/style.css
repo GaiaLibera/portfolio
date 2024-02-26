@@ -1,138 +1,151 @@
 * {
-  font-family: Helvetica;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
   margin: 0px;
 }
 
+h2 {
+  color: rgb(0, 0, 0);
+  font-size: 70px;
+  margin: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
 #toggle {
-  transform: scale(1.5);
-  width: 100px;
-  height: 100px;
+  z-index: 200;
   position: fixed;
-  right: 20px;
-  z-index: 100;
-  top: 12px;
 }
 
 #menu {
-  background-color: white;
-  color: black;
-  width: 40vh;
-  height: 100vh;
+  background-color: none;
+  color: rgb(0, 0, 0);
+  width: 35vw;
+  height: 60vh;
   text-align: left;
   position: fixed;
-  right: -40vh;
-  transition: all 0.3s;
-  padding-top: 75px;
-  z-index: 99;
+  left: -40vw;
+  top: 90px;
+  transition: all 0.6s;
+  z-index: 90;
+  padding: 15px;
 }
 #menu h3 {
   font-weight: lighter;
-  font-size: 9pt;
+  font-size: 13pt;
   position: absolute;
-  bottom: 0px;
-  margin: 20px;
+  line-height: 25px;
 }
-#menu h3 p1 {
-  line-height: 18px;
-}
-#menu h3 p1 categories {
+#menu h3 categories {
   font-weight: bold;
 }
-#menu h3 a {
+#menu .social {
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  color: black;
+}
+
+#menu .social:hover {
+  color: #1422eb;
 }
 
 #menu.active {
-  right: 0;
-}
-
-text {
-  color: rgb(150, 150, 150);
-  font-size: 15px;
-  position: relative;
-  top: 10px;
-  left: 90px;
-}
-text p {
-  white-space: pre-line;
+  left: 0;
 }
 
 body {
-  width: 100;
-  height: 100;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 body .menu-item {
-  width: 50vw;
-  height: 50vh;
+  width: 50%;
+  height: 50%;
   position: fixed;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 70px;
-}
-body .carousel-item {
-  object-fit: cover;
+  display: inline-flex;
+  flex-direction: column;
 }
 body #about {
   top: 0;
-  right: 0;
-  background-color: red;
-  flex-direction: row;
-  justify-content: right;
+  left: 0;
+  background-color: #a5b700;
 }
 body #work {
-  right: 0;
-  top: 50vh;
-  background-color: red;
+  left: 0;
+  top: 50%;
+  background-color: #a5b700;
+  justify-content: end;
 }
 body #graphic {
-  top: 50vh;
-  background-color: blue;
+  left: 50%;
+  top: 50%;
+  background-color: rgb(0, 0, 0);
+  justify-content: end;
 }
-
-.slider {
-  position: relative;
-  width: 50vw;
+body #ph {
+  left: 50%;
+  top: 0;
+  background-color: #dedede;
+  justify-content: end;
+}
+body .img-background {
   height: 50vh;
-  overflow: hidden;
-}
-.slider .slide {
+  width: 50vw;
   display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
-.slider .active {
+
+h2:hover {
+  color: #1422eb;
+}
+
+.menu-item:hover .notinhover {
+  display: none;
+}
+.menu-item:hover .img-background {
   display: block;
-  opacity: 1;
 }
 
-.container {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  background-color: rgb(255, 255, 255);
-  z-index: 0;
-  padding-top: 20px;
-}
-.container img {
-  height: 450px;
+.scrolling {
+  display: inline-block;
+  white-space: nowrap;
+  display: inline-block;
+  animation: scrolling 10s linear infinite;
 }
 
+.message {
+  font-size: 70px;
+  color: #dedede;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translate3d(51%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 @media screen and (max-width: 768px) {
-  #menu.active {
+  #menu {
+    background-color: #a5b700;
+    height: 90vh;
     width: 100vw;
+    left: 0;
+    top: -100vh;
+    z-index: 100;
   }
-  #menu.active ul a {
-    font-size: 24px;
+  #menu h3 {
+    margin-top: 70px;
   }
-  #menu.active h3 {
-    font-size: 12px;
+  #menu.active {
+    top: 15vh;
+  }
+  #toggle {
+    font-size: 50px;
   }
   body {
     height: 100vh;
@@ -142,17 +155,26 @@ body #graphic {
   body .menu-item {
     width: 100vw;
     height: 25vh;
-    font-size: 50px;
   }
-  body .slider {
-    width: 100vw;
-    height: 25vh;
+  body .menu-item h2 {
+    font-size: 50px;
   }
   body #ph {
     top: 25vh;
+    left: 0px;
+  }
+  body #ph .img-background {
+    height: 25vh;
+    width: 100vw;
   }
   body #work {
     top: 75vh;
+  }
+  body #graphic {
+    left: 0px;
+  }
+  body #graphic .img-background {
+    display: none;
   }
 }
 
