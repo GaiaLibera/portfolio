@@ -1,36 +1,20 @@
+//ABOUT
 
-// MENU ANIMATION
-const menu = document.querySelector('#menu')
-const toggle = document.querySelector('#toggle')
+let testoNascosto = document.querySelector('#aboutItem');
+let buttonMore = document.querySelector('#toggle');
 
-const toggleMenu = () => {
-  toggle.classList.toggle('is-active')
-  menu.classList.toggle('active')
+function toggleAbout() {
+    testoNascosto.classList.toggle('visible');
 }
 
-document.addEventListener('DOMContentLoaded', () =>{
-  toggle.addEventListener('click', toggleMenu)
+document.addEventListener('DOMContentLoaded', () => {
+    buttonMore.addEventListener('click', toggleAbout)
 })
 
+//ALERT
 
-// SLIDESHOW in JS
-document.addEventListener("DOMContentLoaded", function() {
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
+function Auguri () {
+    alert ("Buon Compleanno Gaia")
+}
 
-  function slideshow(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    slideshow(currentSlide);
-  }
-  setInterval(nextSlide, 4000);
-});
+ document.addEventListener('DOMContentLoaded', Auguri)

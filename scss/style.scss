@@ -1,9 +1,9 @@
-$white: #dedede;
+$white: white;
 $color: #a5b700;
 $complementary: #1422eb;
 $black: rgb(0, 0, 0);
-$size-title: 70px;
-
+$h2size: 70px;
+$h3size:35px;
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -13,204 +13,168 @@ $size-title: 70px;
 
 h2{
     color: $black;
-    font-size: $size-title;
+    font-size: $h2size;
     margin: 15px;
 }
 
 a{
     text-decoration: none;
+    color: black;
 }
 
-#toggle {
-    z-index: 200;
-    position: fixed;
-}
-
-#menu {
+//MENU A COMPARSA ABOUT
+#aboutItem {
+    height: 35%;
+    width: 48%;
     background-color: none;
     color: $black;
-    width: 35vw;
-    height: 60vh;
-    text-align: left;
-    position: fixed;
-    left: -40vw;
-    top: 90px;
-    transition: all .6s;
-    z-index: 90;
-    padding: 15px;
-
+    position: absolute;
+    top:-35vh;
+    transition: all 1s;
+    padding-left: 15px;
+    
     h3 {
-        font-weight: lighter;
+        font-size: $h3size;
+        display: inline-block;
+    }
+    
+    p {
         font-size: 13pt;
-        position: absolute;
-        line-height: 25px;
-
-            categories {
-                font-weight: bold;
-            }
-        }
-
-        .social {
-            color: $black;
-            text-decoration: none;
-        }
-    }
-
-#menu .social:hover{
-    color: $complementary;
-}
-
-#menu.active {
-    left: 0;
-}
-
-
-body {
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-
-    .menu-item {
-        width: 50%;
-        height: 50%;
-        position: fixed;
-        display: inline-flex;
-        flex-direction: column;
-    }
-
-    #about {
-        top: 0;
-        left: 0;
-        background-color: $color;
-    }
-
-    #work {
-        left: 0;
-        top: 50%;
-        background-color: $color;
-        justify-content: end;
-    }
-
-    #graphic {
-        left: 50%;
-        top: 50%;
-        background-color: $black;
-        justify-content: end;
-    }
-
-    #ph {
-        left: 50%;
-        top: 0;
-        background-color: $white;
-        justify-content: end;
-    }
-
-    .img-background{
-        height: 50vh;
-        width: 50vw;
         display: none;
-        object-fit: cover;
-  }
+        color: $complementary;
+    }
+}
+
+#aboutItem.visible {
+    top: 12%;
+}
+
+//STRUTTURA HOMPAGE
+.menu-item {
+    width: 50%;
+    height: 50%;
+    position: fixed;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#about {
+    background-color: $color;
+}
+
+#work {
+    top: 50%;
+    background-color: $color;
+    justify-content: end;
+}
+
+#graphic {
+    left: 50%;
+    top: 50%;
+    background-color: $black;
+    justify-content: end;
+}
+
+#ph {
+    left: 50%;
+    background-color: $white;
+    justify-content: end;
+}
+
+.img-background{
+    height: 50vh;
+    width: 50vw;
+    display: none;
+    object-fit: cover;
 }
 
 //HOVER
-h2:hover {
+h2:hover, h3:hover, a:hover {
     color: $complementary;
 }
 
 .menu-item:hover{
+
     .notinhover{
         display: none;
     }
+
     .img-background{
         display: block;
     }
 }
 
+#aboutItem h3:hover + p {
+    display: inline-block; // Mostra p al'hover di h3
+}
 
-//ANIMAZIONE SCROLLING
+
+//SCROLLING TEXT
 .scrolling {
     display: inline-block;
-    white-space: nowrap;
-    display: inline-block;
+    white-space: nowrap; //no a capo
     animation: scrolling 10s linear infinite;
-  }
-  
-  
-  .message{
-    font-size: $size-title;
+}
+
+.message{
+    font-size: $h2size;
     color: $white;
     white-space: nowrap;
     display: inline-block;
-  }
+}
 
-  @keyframes scrolling {
+@keyframes scrolling {
     0% {
-    transform: translate3d(51%, 0, 0);
+        transform: translate3d(100%, 0, 0);
     }
     100% {
-    transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-300%, 0, 0);
     }
-    }
-
-//PH
+}
 
 //RESPONSIVE
 @media screen and (max-width: 768px) {
-    #menu {
+    #aboutItem {
         background-color: $color;
-        height: 90vh;
-        width: 100vw;
-        left: 0;
+        width: 100%;
+        height: 38%;
         top: -100vh;
         z-index: 100;
-
-        h3{
-            margin-top: 70px;
+        
+        p{
+            display: inline-block;
+            color: $black;
         }
     }
-
-    #menu.active {
-        top: 15vh;
+    
+    h3:hover{
+        color: $black;
     }
-
-    #toggle {
-        font-size: 50px;
-
-    }
-
-    body {
-        height: 100vh;
+    
+    .menu-item, .img-background {
         width: 100vw;
-        display: block;
+        height: 25vh;
+    }
+    
+    #ph {
+        top: 25vh;
+        left: 0px;
+    }
+    
+    #work {
+        top: 75vh;
 
-        .menu-item {
-            width: 100vw;
-            height: 25vh;
-
-            h2 {
-                font-size: 50px;
-            }
+        .img-background{
+            display: none;
         }
-
-        #ph {
-            top: 25vh;
-            left: 0px;
-            .img-background{
-                height: 25vh;
-                width: 100vw;
-            }
-        }
-
-        #work {
-            top: 75vh;
-        }
-
-        #graphic {
-            left: 0px;
-            .img-background{
-                display: none;
-            }
+        
+        .notinhover{
+            display: block;
         }
     }
+    
+    #graphic {
+        left: 0px;
+    }
+    
 }
