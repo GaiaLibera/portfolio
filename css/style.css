@@ -113,7 +113,7 @@ h2:hover, h3:hover, a:hover {
     transform: translate3d(-300%, 0, 0);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   #aboutItem {
     background-color: #a5b700;
     width: 100%;
