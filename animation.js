@@ -10,3 +10,4 @@ function toggleAbout() {
 document.addEventListener('DOMContentLoaded', () => {
     buttonMore.addEventListener('click', toggleAbout)
 })
+
