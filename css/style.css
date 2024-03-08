@@ -128,14 +128,16 @@ h2:hover, h3:hover, a:hover {
   h3:hover {
     color: rgb(0, 0, 0);
   }
+  .menu-item {
+    display: block;
+  }
   .menu-item, .img-background {
     width: 100vw;
     height: 25vh;
-    display: block;
   }
   #ph {
     top: 25vh;
-    left: 0px;
+    left: 0;
   }
   #work {
     top: 75vh;
@@ -147,7 +149,8 @@ h2:hover, h3:hover, a:hover {
     display: block;
   }
   #graphic {
-    left: 0px;
+    left: 0;
+    top: 50vh;
   }
 }
 

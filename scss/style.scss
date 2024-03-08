@@ -150,16 +150,19 @@ h2:hover, h3:hover, a:hover {
     h3:hover{
         color: $black;
     }
-    
+
+    .menu-item{
+        display: block;
+    }
+
     .menu-item, .img-background {
         width: 100vw;
         height: 25vh;
-        display: block;
     }
     
     #ph {
         top: 25vh;
-        left: 0px;
+        left:0;
     }
     
     #work {
@@ -175,7 +178,8 @@ h2:hover, h3:hover, a:hover {
     }
     
     #graphic {
-        left: 0px;
+        left:0;
+        top:50vh;
     }
     
 }
